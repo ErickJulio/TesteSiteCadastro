@@ -1,0 +1,18 @@
+stages:
+  - teste
+
+# Teste 
+teste:
+  image: cypress/browsers:node14.17.0-chrome91-ff89
+  when: always
+  stage: teste
+  script:
+    - npm install
+    - npm run cypress:run # Substitua pelo comando correto para rodar seus testes Cypress
+
+  artifacts:
+    paths:
+      - public
+  only:
+    - /^master$/
+  allow_failure: false
