@@ -14,5 +14,5 @@ teste:
     paths:
       - public
   only:
-    - /^master$/
+    - /^main$/
   allow_failure: false
