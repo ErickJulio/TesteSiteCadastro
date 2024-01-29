@@ -22,8 +22,8 @@ jobs:
       run: npm install -g cypress
 
     - name: Run Cypress Tests
-      run: npx cypress run --record --key 5dd06092-8d4b-437d-a290-778699fecdd1
-
+      run: npx cypress run --record --key 5dd06092-8d4b-437d-a290-778699fecdd1 --config videosFolder=cypress/videos
+      
     - name: Upload Videos
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
