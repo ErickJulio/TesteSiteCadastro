@@ -25,6 +25,7 @@ jobs:
       run: npx cypress run --record --key 5dd06092-8d4b-437d-a290-778699fecdd1
 
     - name: Upload Videos
+      if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
         name: cypress-videos
