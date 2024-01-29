@@ -25,16 +25,10 @@ jobs:
 
     - name: Install Cypress
       run: npm install -g cypress
+    
+    - name: Create Videos Directory
+      run: mkdir -p cypress/videos
 
     - name: Run Cypress Tests
       run: npx cypress run --record --key 5dd06092-8d4b-437d-a290-778699fecdd1 --config videosFolder=cypress/videos
 
-    - name: Create Videos Directory
-      run: mkdir -p cypress/videos
-
-    - name: Upload Videos
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v2
-      with:
-        name: cypress-videos
-        path: cypress/videos
