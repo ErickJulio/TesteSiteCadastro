@@ -32,7 +32,7 @@ describe('Criar Usuario e Efetuar Login', () => {
             expect(response.body.mensagem).to.be.equal('Dados inseridos com sucesso')
         });
     });
-
+  //oi
     it('Efetuar login', () => {
         cy.request({
             method: 'POST',
